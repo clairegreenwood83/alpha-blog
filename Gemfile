@@ -5,6 +5,11 @@ ruby "3.2.2"
 
 gem 'sassc'
 
+gem 'webpacker'
+
+gem 'bcrypt', '~> 3.1.7'
+
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4.3"
 
@@ -16,6 +21,10 @@ gem "sqlite3", "~> 1.4"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
+
+gem 'sass-rails'
+
+gem 'turbolinks'
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
@@ -53,6 +62,7 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :development do
@@ -63,7 +73,7 @@ group :development do
   # gem "rack-mini-profiler"
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  # gem "spring"
+  gem "spring"
 end
 
 group :test do
@@ -72,3 +82,7 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "cssbundling-rails", "~> 1.1"
+
+gem "jsbundling-rails", "~> 1.1"
